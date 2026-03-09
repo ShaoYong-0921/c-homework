@@ -1,20 +1,18 @@
 #include <iostream>
-#include <cmath>
-#include <iomanip>
 
 using namespace std;
 
 int main(){
-    int s, n;
-    double d;
-    cin >> s;
-    while(s --){
-        int w;
-        cin >> n >> d >> w;
-        // ans = (p) + (1 - p) * p + p + (1 - p) * p
-        cout << setprecision(4);
-        cout << (pow((1 - d), w - 1) * d) / ( 1 - pow((1 - d ), n)) << endl;
-        
-
+    int t, a, b, cnt = 0;
+    
+    cin >> t;
+    while( t-- ){
+        cin >> a >> b;
+        cout << "Case " << ++cnt << ": ";
+        int sum = 0;
+        for (int i=a; i<=b; ++i){
+            if( i % 2 == 1) sum += i;
+        }
+        cout << sum << endl;
     }
 }
