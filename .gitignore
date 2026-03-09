@@ -1,6 +1,7 @@
 *.exe
 *.out
 *.app
+*txt
 .DS_Store
 .vscode/.suo
 output/
