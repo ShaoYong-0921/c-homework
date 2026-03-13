@@ -16,7 +16,7 @@ int main(){
         // cout << s << endl;
         int dim = 0;
         for(int i=4; i<s.size(); ++i){
-            if ('0' <= s[i] && s[i] <= '9') dim += dim *10 + (s[i] - '0');
+            if ('0' <= s[i] && s[i] <= '9') dim = dim *10 + (s[i] - '0');
         }
         int n = dim;
         // cout << "n = " << n << endl;
