@@ -3,22 +3,20 @@
 
 using namespace std;
 
-bool square[100000];
+bool s[100005];
 
 int main(){
-    int a, b, i = 0, idx = 0;
-    memset(square, 0, sizeof(square));
-    while(1){
-        ++ i;
-        if (i * i > 100000) break;
-        square[i * i] = true; 
+    int a, b;
+    memset(s, 0, sizeof(s));
+    for(int i=1; i*i<100005; ++i){
+        s[i*i] = true;
     }
-    while( cin >> a >> b) {
-        if (a == 0 && b == 0) break;
-        int ans = 0;
+    while(cin >> a >> b){
+        if (!a && !b) break;
+        int sum = 0;
         for(int i=a; i<=b; ++i){
-            if (square[i]) ++ ans;
+            if (s[i]) ++sum;
         }
-        cout << ans << endl;
+        cout << sum << '\n';
     }
 }
