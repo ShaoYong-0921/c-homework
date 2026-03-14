@@ -33,13 +33,13 @@ int main(){
             for(int i=k; i>=0; --i){
                 // if(dec > fib[i]){
                 if (dec / fib[i]) s += '1';
-                else if()
+                else if (s == "") continue;
                 else s += '0';
                 dec %= fib[i];
                 // }
             }
             // cout << s << endl;
-            cout << num << " " << s << " (fib)\n";
+            cout << num << " = " << s << " (fib)\n";
         }
     }
 
