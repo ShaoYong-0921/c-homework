@@ -12,8 +12,13 @@ int main(){
         int w;
         cin >> n >> d >> w;
         // ans = (p) + (1 - p) * p + p + (1 - p) * p
-        cout << setprecision(4);
-        cout << (pow((1 - d), w - 1) * d) / ( 1 - pow((1 - d ), n)) << endl;
+        cout << fixed << setprecision(4);
+        
+        if (d == 0.0) {
+            cout << 0.0000 << "\n";
+        } else {
+            cout << (pow((1 - d), w - 1) * d) / (1 - pow((1 - d), n)) << "\n";
+        }
         
 
     }
